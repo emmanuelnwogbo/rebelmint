@@ -39,7 +39,7 @@ export default class CollectionStatus extends React.Component<Props, State> {
           </div>
           
           <div className="supply">
-            <span className="label">Supply: </span>
+            <span className="label"></span>
             
           </div>
 
