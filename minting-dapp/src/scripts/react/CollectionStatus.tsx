@@ -10,9 +10,11 @@ interface Props {
 }
 
 interface State {
+
 }
 
 const defaultState: State = {
+  
 };
 
 export default class CollectionStatus extends React.Component<Props, State> {
@@ -42,13 +44,13 @@ export default class CollectionStatus extends React.Component<Props, State> {
           </div>
 
           <div className="current-sale">
-            <span className="label">Sale is </span>
+            <span className="label"></span>
             {this.isSaleOpen() ?
               <>
-                {this.props.isWhitelistMintEnabled ? 'whitelist only' : 'open'}
+                {this.props.isWhitelistMintEnabled ? ' Sale is currently whitelist only' : 'Public Sale is open'}
               </>
               :
-              'Closed'
+              ''
             }
           </div>
         </div>

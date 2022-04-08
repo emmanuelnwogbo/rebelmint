@@ -9,10 +9,10 @@ const CollectionConfig: CollectionConfigInterface = {
   // The contract name can be updated using the following command:
   // yarn rename-contract NEW_CONTRACT_NAME
   // Please DO NOT change it manually!
-  contractName: 'TheRebellion',
+  contractName: 'RubbleRebel',
   tokenName: 'The Rebellion Nft',
   tokenSymbol: 'Rebel',
-  hiddenMetadataUri: 'ipfs://QmUPdk52gg268cb4ApAvJKc9XHihaXMu4NLnQaC5Gdob9m/hidden.json',
+  hiddenMetadataUri: 'ipfs://QmeUDtu3NqxSBXjJ8z3WcHgv2iSSttgpTZTwiYmsfoCsKA/hidden.json',
   maxSupply: 4589,
   whitelistSale: {
     price: 0.04,
@@ -26,8 +26,8 @@ const CollectionConfig: CollectionConfigInterface = {
     price: 0.04,
     maxMintAmountPerTx: 3,
   },
-  contractAddress: '0xC7706E1f73DcD6B76c76627de83739BD5320C633',
-  marketplaceIdentifier: 'TheRebellionNft',
+  contractAddress: '0xE865DedA843BC49789cD92ED8Efe2D921D1c1E90',
+  marketplaceIdentifier: 'RubbleRebelNft',
   marketplaceConfig: openSea,
   whitelistAddresses: whitelistAddresses,
 };

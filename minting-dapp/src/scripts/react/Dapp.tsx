@@ -91,7 +91,7 @@ export default class Dapp extends React.Component<Props, State> {
     try {
       await this.contract.whitelistMint(amount, Whitelist.getProofForAddress(this.state.userAddress!), {value: this.state.tokenPrice.mul(amount)});
     } catch (e) {
-      this.setError(e);
+      this.setError('Address has already claimed whitelist. Please wait for public sale');
     }
   }
 
