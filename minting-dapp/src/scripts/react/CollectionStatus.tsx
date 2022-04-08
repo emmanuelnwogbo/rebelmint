@@ -31,21 +31,21 @@ export default class CollectionStatus extends React.Component<Props, State> {
     return (
       <>
         <div className="collection-status">
-          <div className="user-address">
+          <div className="dapp__mint--useraddress">
             <span className="label">Wallet address:</span>
             <span className="address">{this.props.userAddress}</span>
           </div>
           
           <div className="supply">
-            <span className="label">Supply</span>
+            <span className="label">Supply: </span>
             {this.props.totalSupply}/{this.props.maxSupply}
           </div>
 
           <div className="current-sale">
-            <span className="label">Sale status</span>
+            <span className="label">Sale is </span>
             {this.isSaleOpen() ?
               <>
-                {this.props.isWhitelistMintEnabled ? 'Whitelist only' : 'Open'}
+                {this.props.isWhitelistMintEnabled ? 'whitelist only' : 'open'}
               </>
               :
               'Closed'

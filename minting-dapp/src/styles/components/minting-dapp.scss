@@ -1,1 +1,133 @@
-//https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap
+.jumbotron {
+  display: flex;
+
+  margin-top: #{scaleValue(125)};
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dapp {
+  display: flex;
+  flex-direction: column;
+
+  &__left {
+    width: #{scaleValue(800)};
+    position: relative;
+    z-index: 1;
+    margin-top: #{scaleValue(30)};
+    flex: 1 1;
+
+    &--midphrase {
+      display: flex;
+      flex-direction: column;
+      font-size: #{scaleValue(40)};
+      font-weight: 300;
+
+      & span {
+
+        &.transparent {
+          opacity: .7;
+        }
+
+        &.fff {
+          opacity: 1;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &__mint {
+    margin-top: #{scaleValue(35)};
+    font-size: #{scaleValue(23)};
+    font-weight: 500;
+    line-height: #{scaleValue(45)};
+
+    &--mainnetlabel {
+      color: red;
+      font-weight: 500;
+    }
+
+    &--useraddress {
+      font-size: #{scaleValue(21)};
+      font-weight: 500;
+
+      & span {
+        display: inline-block;
+        margin-right: #{scaleValue(10)}
+      }
+    }
+  }
+
+  &__right {
+
+    &--imgs {
+      position: relative;
+      flex: 1 1;
+      transform: translate(#{scaleValue(0)}, #{scaleValue(-295)});
+
+      & figure {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: #{scaleValue(1000)};
+          width: #{scaleValue(1000)};
+          //opacity: 0;
+          transition: all .3s ease;
+
+          &.active {
+              opacity: 1;
+          }
+
+          & img {
+              object-fit: cover;
+              height: 100%;
+              width: 100%;
+          }
+      }
+    }
+  }
+}
+
+button {
+  border: none;
+  height: #{scaleValue(50)};
+  width: #{scaleValue(150)};
+  font-weight: 500;
+  background: #990f02;
+  outline: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  display: inline-block;
+  margin-right: #{scaleValue(12)};
+
+  &.arit {
+    height: #{scaleValue(50)};
+    width: #{scaleValue(100)};
+    font-size: #{scaleValue(40)};
+  }
+
+  &.mint {
+    height: #{scaleValue(50)};
+    width: #{scaleValue(356)};
+    font-size: #{scaleValue(25)};
+  }
+}
+
+.controls {
+  margin-top: #{scaleValue(20)};
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &-arit {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.mint-amount {
+  padding: #{scaleValue(20)};
+  margin: 0 #{scaleValue(15)};
+}

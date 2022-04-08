@@ -4,5 +4,11 @@
   "build/images/logo.png": "http://localhost:8080/build/images/logo.png",
   "build/images/fav.png": "http://localhost:8080/build/images/fav.png",
   "build/images/preview.png": "http://localhost:8080/build/images/preview.png",
-  "build/images/favicon.png": "http://localhost:8080/build/images/favicon.png"
+  "build/images/favicon.png": "http://localhost:8080/build/images/favicon.png",
+  "build/images/male--character-237.png": "http://localhost:8080/build/images/male--character-237.png",
+  "build/images/REBELLION.png": "http://localhost:8080/build/images/REBELLION.png",
+  "build/images/artboard.png": "http://localhost:8080/build/images/artboard.png",
+  "build/images/emmanuel.png": "http://localhost:8080/build/images/emmanuel.png",
+  "build/images/samson.png": "http://localhost:8080/build/images/samson.png",
+  "build/images/imam.png": "http://localhost:8080/build/images/imam.png"
 }
