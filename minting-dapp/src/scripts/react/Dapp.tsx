@@ -67,11 +67,12 @@ export default class Dapp extends React.Component<Props, State> {
     this.timer();
 
     if (browserProvider?.isMetaMask !== true) {
-      this.setError( 
+      
+      /*this.setError( 
         <>
           <div>Metamask not detected</div>
         </>,
-      );
+      );*/
     }
 
     this.provider = new ethers.providers.Web3Provider(browserProvider);
