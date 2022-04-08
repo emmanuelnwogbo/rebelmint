@@ -19,6 +19,10 @@ body {
     background: #000000;
     color: #fff;
     padding: #{scaleValue(75)} #{scaleValue(130)};
+
+    @media only screen and (max-width: 414px) { 
+      padding: #{scaleValue(75)} #{scaleValue(90)};
+    }
 }
 
 html {

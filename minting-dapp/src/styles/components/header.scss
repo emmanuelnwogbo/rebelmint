@@ -28,7 +28,7 @@
       @media only screen and (max-width: 414px) { 
         width: #{scaleValue(800)};
         height: #{scaleValue(500)};
-        transform: translateX(#{scaleValue(-132)}) translateY(#{scaleValue(-95)});
+        transform: translateX(#{scaleValue(-89)}) translateY(#{scaleValue(-95)});
 
         & figure {
             height: 100%;
@@ -60,7 +60,7 @@
             margin-left: #{scaleValue(50)};
 
             @media only screen and (max-width: 414px) { 
-              transform: translateX(#{scaleValue(-980)}) translateY(1rem);
+              transform: translateX(#{scaleValue(-1000)}) translateY(1rem);
 
             }
           }
