@@ -5,6 +5,11 @@
   font-weight: 500;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 414px) { 
+    flex-direction: column-reverse;  
+    margin-top: 0;
+  }
 }
 
 .dapp {
@@ -18,11 +23,21 @@
     margin-top: #{scaleValue(30)};
     flex: 1 1;
 
+    @media only screen and (max-width: 414px) { 
+      width: 100%;
+      flex-direction: column;
+      flex: 0
+    }
+
     &--midphrase {
       display: flex;
       flex-direction: column;
       font-size: #{scaleValue(40)};
       font-weight: 300;
+
+      @media only screen and (max-width: 414px) { 
+        font-size: #{scaleValue(120)};
+      }
 
       & span {
 
@@ -44,6 +59,11 @@
     font-weight: 500;
     line-height: #{scaleValue(45)};
 
+    @media only screen and (max-width: 414px) { 
+      font-size: #{scaleValue(90)};
+      line-height: #{scaleValue(150)};
+    }
+
     &--mainnetlabel {
       color: red;
       font-weight: 500;
@@ -52,6 +72,13 @@
     &--useraddress {
       font-size: #{scaleValue(21)};
       font-weight: 500;
+
+      @media only screen and (max-width: 414px) { 
+        font-size: #{scaleValue(70)};
+        right: #{scaleValue(-30)};
+        position: fixed;
+        transform: rotate(-90deg) translateY(#{scaleValue(760)});
+      }
 
       & span {
         display: inline-block;
@@ -67,14 +94,25 @@
       flex: 1 1;
       transform: translate(#{scaleValue(0)}, #{scaleValue(-295)});
 
+      @media only screen and (max-width: 414px) { 
+        width: 100%;
+        flex: 0;
+        transform: translate(#{scaleValue(0)}, #{scaleValue(0)});
+      }
+
       & figure {
           position: absolute;
           top: 0;
           right: 0;
           height: #{scaleValue(1000)};
           width: #{scaleValue(1000)};
-          //opacity: 0;
           transition: all .3s ease;
+
+          @media only screen and (max-width: 414px) { 
+            height: #{scaleValue(2000)};
+            width: #{scaleValue(2000)};
+            opacity: .22;
+          }
 
           &.active {
               opacity: 1;
@@ -106,12 +144,25 @@ button {
     height: #{scaleValue(50)};
     width: #{scaleValue(100)};
     font-size: #{scaleValue(40)};
+
+    @media only screen and (max-width: 414px) { 
+      height: #{scaleValue(150)};
+      width: #{scaleValue(400)};
+      font-size: #{scaleValue(150)};
+    }
   }
 
   &.mint {
     height: #{scaleValue(50)};
     width: #{scaleValue(356)};
     font-size: #{scaleValue(25)};
+
+    @media only screen and (max-width: 414px) { 
+      margin-top: #{scaleValue(100)};
+      height: #{scaleValue(190)};
+      width: #{scaleValue(1200)};
+      font-size: #{scaleValue(90)};
+    }
   }
 
   &.connect {

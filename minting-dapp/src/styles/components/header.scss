@@ -5,7 +5,6 @@
 
   &__left {
 
-    
     &--name {
       display: inline-block;
       height: #{scaleValue(30)};
@@ -25,6 +24,23 @@
           height: 100%;
           width: 100%;
       }
+
+      @media only screen and (max-width: 414px) { 
+        width: #{scaleValue(800)};
+        height: #{scaleValue(500)};
+        transform: translateX(#{scaleValue(-132)}) translateY(#{scaleValue(-95)});
+
+        & figure {
+            height: 100%;
+            width: 100%;
+            
+            & img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+      }
     }
   }
 
@@ -42,6 +58,11 @@
 
           &.social {
             margin-left: #{scaleValue(50)};
+
+            @media only screen and (max-width: 414px) { 
+              transform: translateX(#{scaleValue(-980)}) translateY(1rem);
+
+            }
           }
       }
   }
