@@ -173,7 +173,7 @@ export default class Dapp extends React.Component<Props, State> {
             <span className="small">Current network: <span className="dapp__mint--mainnetlabel">{this.state.network?.name}</span></span>
           </div>
           : <div className="dapp__mint--mainnet">
-          <span className="small">{this.state.network ? 'Current network:' : '' }<span className="dapp__mint--mainnetlabel">{this.state.network?.name}</span></span>
+          <span className="small">{this.state.network ? 'Current network: ' : '' }<span className="dapp__mint--mainnetlabel">{this.state.network?.name === 'homestead' ? 'mainnet' : ''}</span></span>
         </div>}
 
         {this.state.errorMessage ? <div className="error"><p>{this.state.errorMessage}</p><button className="close" onClick={() => this.setError()}>Close</button></div> : null}
