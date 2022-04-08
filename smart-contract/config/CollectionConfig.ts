@@ -26,7 +26,7 @@ const CollectionConfig: CollectionConfigInterface = {
     price: 0.04,
     maxMintAmountPerTx: 3,
   },
-  contractAddress: '0x098AeD61A5Bc24D267cf368C718e6e8988589610',
+  contractAddress: '0xbf8b8f09eEfdB74cedd461FA0DaF36b5784Dc80a',
   marketplaceIdentifier: 'TheRebellionNFTNft',
   marketplaceConfig: openSea,
   whitelistAddresses: whitelistAddresses,
