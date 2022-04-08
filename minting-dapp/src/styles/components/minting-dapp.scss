@@ -113,6 +113,11 @@ button {
     width: #{scaleValue(356)};
     font-size: #{scaleValue(25)};
   }
+
+  &.connect {
+    width: #{scaleValue(400)};
+    height: #{scaleValue(60)};
+  }
 }
 
 .controls {

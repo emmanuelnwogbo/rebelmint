@@ -155,8 +155,6 @@ export default class Dapp extends React.Component<Props, State> {
             </div>
           </div>
           <div className="header__right">
-            <span>Team</span>
-            <span>Road Map</span>
             <span className="social">
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="52" viewBox="0 0 48 52" fill="none" data-v-379a16a5=""><g filter="url(#filter0_d_15_140)" data-v-379a16a5=""><path d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" fill="#5865F2" data-v-379a16a5=""></path> <path d="M32.8566 15.781C31.1358 15.026 29.2904 14.4697 27.3609 14.1511C27.3257 14.1449 27.2906 14.1603 27.2725 14.191C27.0352 14.5946 26.7723 15.1212 26.5882 15.5351C24.513 15.238 22.4483 15.238 20.4156 15.5351C20.2315 15.112 19.959 14.5946 19.7206 14.191C19.7025 14.1613 19.6674 14.1459 19.6323 14.1511C17.7039 14.4686 15.8585 15.0249 14.1366 15.781C14.1216 15.7872 14.1089 15.7974 14.1004 15.8107C10.6001 20.8112 9.64116 25.6888 10.1116 30.506C10.1137 30.5295 10.1275 30.5521 10.1467 30.5664C12.4561 32.1881 14.6932 33.1727 16.8887 33.8253C16.9238 33.8355 16.9611 33.8232 16.9834 33.7956C17.5028 33.1174 17.9657 32.4023 18.3627 31.6503C18.3861 31.6062 18.3637 31.554 18.3158 31.5366C17.5815 31.2702 16.8823 30.9454 16.2097 30.5766C16.1565 30.5469 16.1522 30.4742 16.2012 30.4393C16.3427 30.3379 16.4843 30.2324 16.6194 30.1258C16.6439 30.1064 16.678 30.1023 16.7067 30.1146C21.1254 32.0437 25.9092 32.0437 30.2758 30.1146C30.3046 30.1013 30.3386 30.1054 30.3642 30.1248C30.4994 30.2314 30.6409 30.3379 30.7835 30.4393C30.8324 30.4742 30.8292 30.5469 30.776 30.5766C30.1034 30.9526 29.4042 31.2702 28.6688 31.5356C28.6209 31.553 28.5997 31.6062 28.6231 31.6503C29.0285 32.4012 29.4915 33.1163 30.0013 33.7945C30.0226 33.8232 30.0608 33.8355 30.096 33.8253C32.3022 33.1727 34.5392 32.1881 36.8486 30.5664C36.8688 30.5521 36.8816 30.5305 36.8837 30.507C37.4467 24.9378 35.9408 20.1002 32.8917 15.8117C32.8843 15.7974 32.8715 15.7872 32.8566 15.781ZM19.0225 27.5728C17.6922 27.5728 16.596 26.4049 16.596 24.9706C16.596 23.5364 17.6709 22.3685 19.0225 22.3685C20.3847 22.3685 21.4703 23.5466 21.449 24.9706C21.449 26.4049 20.3741 27.5728 19.0225 27.5728ZM27.9941 27.5728C26.6638 27.5728 25.5676 26.4049 25.5676 24.9706C25.5676 23.5364 26.6425 22.3685 27.9941 22.3685C29.3563 22.3685 30.4419 23.5466 30.4206 24.9706C30.4206 26.4049 29.3563 27.5728 27.9941 27.5728Z" fill="white" data-v-379a16a5=""></path></g> <defs data-v-379a16a5=""><filter id="filter0_d_15_140" x="-4" y="0" width="56" height="56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" data-v-379a16a5=""><feFlood flood-opacity="0" result="BackgroundImageFix" data-v-379a16a5=""></feFlood> <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" data-v-379a16a5=""></feColorMatrix> <feOffset dy="4" data-v-379a16a5=""></feOffset> <feGaussianBlur stdDeviation="2" data-v-379a16a5=""></feGaussianBlur> <feComposite in2="hardAlpha" operator="out" data-v-379a16a5=""></feComposite> <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" data-v-379a16a5=""></feColorMatrix> <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_15_140" data-v-379a16a5=""></feBlend> <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_15_140" result="shape" data-v-379a16a5=""></feBlend></filter></defs></svg>
             </span>
@@ -179,7 +177,7 @@ export default class Dapp extends React.Component<Props, State> {
             <span className="small">Current network: <span className="dapp__mint--mainnetlabel">{this.state.network?.name}</span></span>
           </div>
           : <div className="dapp__mint--mainnet">
-          <span className="small">Current network: <span className="dapp__mint--mainnetlabel">{this.state.network?.name}</span></span>
+          <span className="small">{this.state.network ? 'Current network:' : '' }<span className="dapp__mint--mainnetlabel">{this.state.network?.name}</span></span>
         </div>}
 
         {this.state.errorMessage ? <div className="error"><p>{this.state.errorMessage}</p><button onClick={() => this.setError()}>Close</button></div> : null}
@@ -226,7 +224,7 @@ export default class Dapp extends React.Component<Props, State> {
 
         {!this.isWalletConnected() || !this.isSoldOut() ?
           <div className="no-wallet">
-            {!this.isWalletConnected() ? <button className="primary" disabled={this.provider === undefined} onClick={() => this.connectWallet()}>Connect Wallet</button> : null}
+            {!this.isWalletConnected() ? <button className="primary connect" disabled={this.provider === undefined} onClick={() => this.connectWallet()}>Connect Wallet</button> : null}
           </div>
           : null}
           </div>

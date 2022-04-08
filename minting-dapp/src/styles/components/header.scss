@@ -12,6 +12,7 @@
       width: #{scaleValue(40)};
       position: relative;
       cursor: pointer;
+      
       & figure {
           position: absolute;
           top: #{scaleValue(-30)};;
@@ -40,11 +41,7 @@
           cursor: pointer;
 
           &.social {
-            margin-left: #{scaleValue(30)};
-          }
-          
-          &:nth-child(2) {
-              margin-left: #{scaleValue(80)};
+            margin-left: #{scaleValue(50)};
           }
       }
   }
