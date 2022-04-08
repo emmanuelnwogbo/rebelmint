@@ -165,9 +165,30 @@ button {
     }
   }
 
+  &.close {
+    height: #{scaleValue(55)};
+    width: #{scaleValue(400)};
+    font-size: #{scaleValue(25)};
+    margin-bottom: #{scaleValue(25)};
+
+    @media only screen and (max-width: 414px) { 
+      margin-top: #{scaleValue(100)};
+      height: #{scaleValue(190)};
+      width: #{scaleValue(1200)};
+      font-size: #{scaleValue(90)};
+    }
+  }
+
   &.connect {
     width: #{scaleValue(400)};
     height: #{scaleValue(60)};
+
+    @media only screen and (max-width: 414px) { 
+      margin-top: #{scaleValue(100)};
+      height: #{scaleValue(190)};
+      width: #{scaleValue(1200)};
+      font-size: #{scaleValue(90)};
+    }
   }
 }
 
