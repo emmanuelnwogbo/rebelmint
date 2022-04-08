@@ -7,7 +7,7 @@ import '@openzeppelin/contracts/access/Ownable.sol';
 import '@openzeppelin/contracts/utils/cryptography/MerkleProof.sol';
 import '@openzeppelin/contracts/security/ReentrancyGuard.sol';
 
-contract RubbleRebel is ERC721A, Ownable, ReentrancyGuard {
+contract TheRebellionNFT is ERC721A, Ownable, ReentrancyGuard {
 
   using Strings for uint256;
 
@@ -22,7 +22,7 @@ contract RubbleRebel is ERC721A, Ownable, ReentrancyGuard {
   uint256 public maxSupply;
   uint256 public maxMintAmountPerTx;
 
-  bool public paused = true;
+  bool public paused = false;
   bool public whitelistMintEnabled = false;
   bool public revealed = false;
 
