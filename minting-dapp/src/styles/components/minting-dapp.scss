@@ -208,3 +208,16 @@ button {
   padding: #{scaleValue(20)};
   margin: 0 #{scaleValue(15)};
 }
+
+.timer-div {
+  display: flex;
+  align-items: center;
+}
+
+.countdown-timer {
+  display: inline-block;
+  margin-left: #{scaleValue(15)};
+  color: #990f02;
+  font-weight: 700;
+  font-size: #{scaleValue(30)};
+}

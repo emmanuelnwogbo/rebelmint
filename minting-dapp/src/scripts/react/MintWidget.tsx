@@ -31,7 +31,7 @@ export default class MintWidget extends React.Component<Props, State> {
   }
 
   componentDidMount = async () => {
-    this.timer();
+    
   }
 
   private canMint(): boolean {
@@ -66,7 +66,7 @@ export default class MintWidget extends React.Component<Props, State> {
 
   private timer(): void 
   {
-    var countDownDate = new Date("Apr 10, 2022 18:0:0").getTime();
+    var countDownDate = new Date("Apr 10, 2022 12:0:0").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(() => {
@@ -113,12 +113,12 @@ export default class MintWidget extends React.Component<Props, State> {
             </div>
 
             <div className="controls">
-              <div className="controls-arit">
+             { /*<div className="controls-arit">
                 <button className="decrease arit" onClick={() => this.decrementMintAmount()}>-</button>
                 <span className="mint-amount">{this.state.mintAmount} {this.state.mintAmount > 1 ? 'Rebels' : 'Rebel'}</span>
                 <button className="increase arit" onClick={() => this.incrementMintAmount()}>+</button>
-              </div>
-              <button className="primary mint" onClick={() => this.mint()}>Mint</button>
+        </div> */}
+              {/*<button className="primary mint" onClick={() => this.mint()}>Mint</button>*/}
             </div>
           </div>
           :
