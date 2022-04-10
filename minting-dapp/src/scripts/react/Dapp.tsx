@@ -64,22 +64,22 @@ export default class Dapp extends React.Component<Props, State> {
   componentDidMount = async () => {
     const browserProvider = await detectEthereumProvider() as ExternalProvider;
 
-    this.timer();
+    //this.timer();
 
     if (browserProvider?.isMetaMask !== true) {
       
-      /*this.setError( 
+      this.setError( 
         <>
           <div>Metamask not detected</div>
         </>,
-      );*/
+      );
     }
 
     this.provider = new ethers.providers.Web3Provider(browserProvider);
 
     this.registerWalletEvents(browserProvider);
 
-    //await this.initWallet();
+    await this.initWallet();
   }
 
   private timer(): void 
@@ -106,7 +106,6 @@ export default class Dapp extends React.Component<Props, State> {
     calculatedTime = days + " day  " + hours + " hrs  "
     + minutes + " mins  " + seconds + " secs  ";
 
-    console.log(calculatedTime);
     this.setState({
       time: calculatedTime
     });
@@ -270,8 +269,8 @@ export default class Dapp extends React.Component<Props, State> {
 
         {!this.isWalletConnected() || !this.isSoldOut() ?
           <div className="no-wallet">
-            <div className="timer-div"><span>Count down to Mint: </span><span className="countdown-timer">{ this.state.time }</span></div>
-            {/*!this.isWalletConnected() ? <button className="primary connect" disabled={this.provider === undefined} onClick={() => this.connectWallet()}>Connect Wallet</button> : null*/}
+            {/*<div className="timer-div"><span>Count down to Mint: </span><span className="countdown-timer">{ this.state.time }</span></div>*/}
+            {!this.isWalletConnected() ? <button className="primary connect" disabled={this.provider === undefined} onClick={() => this.connectWallet()}>Connect Wallet</button> : null}
           </div>
           : null}
           </div>

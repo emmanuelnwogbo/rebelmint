@@ -30,10 +30,6 @@ export default class MintWidget extends React.Component<Props, State> {
     this.state = defaultState;
   }
 
-  componentDidMount = async () => {
-    
-  }
-
   private canMint(): boolean {
     return !this.props.isPaused || this.canWhitelistMint();
   }
@@ -62,44 +58,6 @@ export default class MintWidget extends React.Component<Props, State> {
     }
 
     await this.props.whitelistMintTokens(this.state.mintAmount);
-  }
-
-  private timer(): void 
-  {
-    var countDownDate = new Date("Apr 10, 2022 12:0:0").getTime();
-
-    // Update the count down every 1 second
-    var x = setInterval(() => {
-
-    // Get today's date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Display the result in the element with id="demo"
-    let calculatedTime;
-    calculatedTime = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-
-    console.log(calculatedTime);
-    this.setState({
-      time: calculatedTime
-    });
-
-    // If the count down is finished, write some text
-    if (distance < 0) {
-      clearInterval(x);
-    }
-
-    return;
-    }, 1000);
   }
 
   render() {
