@@ -253,11 +253,11 @@ export default class Dapp extends React.Component<Props, State> {
                     whitelistMintTokens={(mintAmount) => this.whitelistMintTokens(mintAmount)}
                   />
                   :
-                  <div className="collection-sold-out">
+                  {/*<div className="collection-sold-out">
                     <h2>Tokens have been <strong>sold out</strong>! <span className="emoji">🥳</span></h2>
 
                     You can buy from our beloved holders on <a href={this.generateMarketplaceUrl()} target="_blank">{CollectionConfig.marketplaceConfig.name}</a>.
-                  </div>
+                </div>*/}
                 }
               </>
               :
