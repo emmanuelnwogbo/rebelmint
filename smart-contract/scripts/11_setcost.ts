@@ -3,9 +3,9 @@ import NftContractProvider from '../lib/NftContractProvider';
 async function main() {
   const contract = await NftContractProvider.getContract();
 
-  await (await contract.setMaxMintAmountPerTx(3)).wait();
+  await (await contract.setCost(0)).wait();
 
-  console.log('max mint amount changed');
+  console.log('const to mint changed');
 }
 
 main().catch((error) => {

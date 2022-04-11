@@ -82,42 +82,6 @@ export default class Dapp extends React.Component<Props, State> {
     await this.initWallet();
   }
 
-  private timer(): void 
-  {
-    var countDownDate = new Date("Apr 10, 2022 12:0:0").getTime();
-
-    // Update the count down every 1 second
-    var x = setInterval(() => {
-
-    // Get today's date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Display the result in the element with id="demo"
-    let calculatedTime;
-    calculatedTime = days + " day  " + hours + " hrs  "
-    + minutes + " mins  " + seconds + " secs  ";
-
-    this.setState({
-      time: calculatedTime
-    });
-
-    // If the count down is finished, write some text
-    if (distance < 0) {
-      clearInterval(x);
-    }
-
-    return;
-    }, 1000);
-  }
 
   async mintTokens(amount: number): Promise<void>
   {
@@ -252,11 +216,11 @@ export default class Dapp extends React.Component<Props, State> {
                     whitelistMintTokens={(mintAmount) => this.whitelistMintTokens(mintAmount)}
                   />
                   :
-                  {/*<div className="collection-sold-out">
+                  <div className="collection-sold-out">
                     <h2>Tokens have been <strong>sold out</strong>! <span className="emoji">🥳</span></h2>
 
-                    You can buy from our beloved holders on <a href={this.generateMarketplaceUrl()} target="_blank">{CollectionConfig.marketplaceConfig.name}</a>.
-                </div>*/}
+                    You can check us out on <a className="proj-link" href="https://opensea.io/collection/the-rebellion-nft" target="_blank">{CollectionConfig.marketplaceConfig.name} </a><span>for reveal!</span>
+                </div>
                 }
               </>
               :
@@ -269,10 +233,9 @@ export default class Dapp extends React.Component<Props, State> {
 
         {!this.isWalletConnected() || !this.isSoldOut() ?
           <div className="no-wallet">
-            {/*<div className="timer-div"><span>Count down to Mint: </span><span className="countdown-timer">{ this.state.time }</span></div>*/}
             {!this.isWalletConnected() ? <button className="primary connect" disabled={this.provider === undefined} onClick={() => this.connectWallet()}>Connect Wallet</button> : null}
           </div>
-          : null}
+          : <div></div>}
           </div>
 
        </div>
