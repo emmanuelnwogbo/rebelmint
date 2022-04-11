@@ -79,7 +79,7 @@ export default class Dapp extends React.Component<Props, State> {
 
     this.registerWalletEvents(browserProvider);
 
-    await this.initWallet();
+    //await this.initWallet();
   }
 
 
@@ -181,6 +181,11 @@ export default class Dapp extends React.Component<Props, State> {
          </div>
 
           <div className="dapp__mint">
+          <div className="collection-sold-out">
+            <h2>Tokens have been <strong>sold out</strong>! <span className="emoji">🥳</span></h2>
+
+            You can check us out on <a className="proj-link" href="https://opensea.io/collection/the-rebellion-nft" target="_blank">{CollectionConfig.marketplaceConfig.name} </a><span>for reveal!</span>
+          </div>
           {this.isNotMainnet() ?
           <div className="not-mainnet">
             <span className="small">Current network: <span className="dapp__mint--mainnetlabel">{this.state.network?.name}</span></span>
@@ -191,7 +196,7 @@ export default class Dapp extends React.Component<Props, State> {
 
         {this.state.errorMessage ? <div className="error"><p>{this.state.errorMessage}</p><button className="close" onClick={() => this.setError()}>Close</button></div> : null}
         
-        {this.isWalletConnected() ?
+        {/*this.isWalletConnected() ?
           <>
             {this.isContractReady() ?
               <>
@@ -220,7 +225,7 @@ export default class Dapp extends React.Component<Props, State> {
                     <h2>Tokens have been <strong>sold out</strong>! <span className="emoji">🥳</span></h2>
 
                     You can check us out on <a className="proj-link" href="https://opensea.io/collection/the-rebellion-nft" target="_blank">{CollectionConfig.marketplaceConfig.name} </a><span>for reveal!</span>
-                </div>
+                  </div>
                 }
               </>
               :
@@ -229,13 +234,13 @@ export default class Dapp extends React.Component<Props, State> {
               </div>
             }
           </>
-        : null}
+          : null*/}
 
-        {!this.isWalletConnected() || !this.isSoldOut() ?
+        {/*!this.isWalletConnected() || !this.isSoldOut() ?
           <div className="no-wallet">
             {!this.isWalletConnected() ? <button className="primary connect" disabled={this.provider === undefined} onClick={() => this.connectWallet()}>Connect Wallet</button> : null}
           </div>
-          : <div></div>}
+        : <div></div>*/}
           </div>
 
        </div>
