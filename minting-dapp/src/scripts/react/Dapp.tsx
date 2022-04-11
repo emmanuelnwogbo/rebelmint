@@ -176,7 +176,7 @@ export default class Dapp extends React.Component<Props, State> {
        <div className="dapp__left">
          <div className="dapp__left--midphrase">
           <span className="fff">A community driven brand</span>
-          <span className="transparent">4444 hand painted NFTs ready to</span>
+          <span className="transparent">4600 hand painted NFTs ready to</span>
           <span className="transparent">take web3 by storm.</span>
          </div>
 
